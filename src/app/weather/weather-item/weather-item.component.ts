@@ -1,17 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { WeatherItem } from "../weather-models/weather-item";
 
 @Component({
   selector: 'weather-item',
   templateUrl: './weather-item.component.html',
-  styleUrls: ['./weather-item.component.sass']
+  styleUrls: ['./weather-item.component.sass'],
+  // inputs: ['weatherItem: item'] // weatherItem in the calss, outter as item
 })
 export class WeatherItemComponent implements OnInit {
 
-  weatherItem: WeatherItem;
+  @Input('item') weatherItem: WeatherItem;
 
   constructor() {
-    this.weatherItem = new WeatherItem('London', 'Rainy', 32);
+
   }
 
   ngOnInit() {

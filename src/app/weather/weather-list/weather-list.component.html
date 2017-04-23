@@ -1,3 +1,4 @@
 <section class="weather-list">
-    <weather-item></weather-item>
+    <!-- bind item in the loop to weatherItem -->
+    <weather-item *ngFor="let item of weatherItems" [item]="item"></weather-item>
 </section>

@@ -15,15 +15,19 @@ export class WeatherSearchComponent implements OnInit {
   data: any = {};
 
   onSubmit(form){
-    this._weatherService.searchWeatherData(form.value.city)
-        .subscribe(data => {
-          const item = new WeatherItem(data.name, data.weather[0].description, data.main.temp)
-          this._weatherService.addWeatherItem(item);
-        });
+    // this._weatherService.searchWeatherData(form.value.city)
+    //     .subscribe(data => {
+    //       const item = new WeatherItem(data.name, data.weather[0].description, data.main.temp)
+    //       this._weatherService.addWeatherItem(item);
+    //     });
+    var data = this.data;
+    const item = new WeatherItem(data.name, data.weather[0].description, data.main.temp)
+    this._weatherService.addWeatherItem(item);
   }
 
-  onSearch(city){
-    this.searchStream.next(city);
+  onSearch(intputWord){
+    console.log(intputWord);
+    this.searchStream.next(intputWord);
   }
 
   constructor(private _weatherService: WeatherService) { }

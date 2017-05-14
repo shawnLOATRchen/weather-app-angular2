@@ -11,11 +11,8 @@ export class WeatherItemComponent implements OnInit {
 
   @Input('item') weatherItem: WeatherItem;
 
-  constructor() {
+  constructor() { }
 
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

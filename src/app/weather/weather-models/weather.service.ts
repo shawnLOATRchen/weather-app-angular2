@@ -21,7 +21,7 @@ export class WeatherService {
   }
 
   clearWeatherItems(){
-    WEATHER_ITEMS.splice(0);
+    WEATHER_ITEMS.splice(0); // remove element from index 0 to the end
   }
 
   searchWeatherData(city: string): Observable<any>{

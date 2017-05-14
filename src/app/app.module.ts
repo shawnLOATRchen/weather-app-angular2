@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+
+// weather components
 import { WeatherItemComponent } from './weather/weather-item/weather-item.component';
 import { WeatherListComponent } from './weather/weather-list/weather-list.component';
 import { WeatherSearchComponent } from './weather/weather-search/weather-search.component';
-
-import { WeatherService } from "./weather/weather-models/weather.service";
+// weather services
+import { WeatherService } from "./weather/weather-service/weather.service";
 import { WeatherSidebarComponent } from './weather/weather-sidebar/weather-sidebar.component';
 
 @NgModule({

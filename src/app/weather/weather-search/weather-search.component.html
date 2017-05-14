@@ -1,9 +1,12 @@
 <section class="weather-search">
   <form (ngSubmit)="onSubmit(f)" #f="ngForm">
-    <label for="city">City</label>
-    <input type="text" [(ngModel)]="city" name="city" (input)="onSearch(inputCity.value)" #inputCity required>
-    <button type="submit" name="button">Add City</button>
-    <div class="">
+    <div class="input-group">
+      <input class="form-control" type="text" [(ngModel)]="city" name="city" (input)="onSearch(inputCity.value)" #inputCity required>
+      <div class="input-group-btn">
+        <button class="btn btn-success" type="submit" name="button">Add City</button>
+      </div>
+    </div>
+    <div class="search-result">
       <span class="info">City found: </span> {{data.name}}
     </div>
   </form>

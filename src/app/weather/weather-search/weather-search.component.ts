@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder }   from '@angular/forms';
-import { WeatherService } from "../weather-models/weather.service";
+import { WeatherService } from "../weather-service/weather.service";
 import { WeatherItem } from '../weather-models/weather-item';
 import { Subject } from 'rxjs/subject';
 

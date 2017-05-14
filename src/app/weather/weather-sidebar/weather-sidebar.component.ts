@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherProfile } from '../weather-models/weather-profile';
-import { ProfileService } from '../weather-models/weather-profile.service';
-import { WeatherService } from '../weather-models/weather.service';
 import { WeatherItem } from '../weather-models/weather-item';
+import { ProfileService } from '../weather-service/weather-profile.service';
+import { WeatherService } from '../weather-service/weather.service';
+
 
 @Component({
   selector: 'weather-sidebar',
